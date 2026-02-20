@@ -47,7 +47,9 @@ export function CtaSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Primary CTA */}
           <a
-            href="#book"
+            href="https://calendly.com/dillon-hippaihq/ai-automation-strategy-call"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 bg-[#53FC18] text-[#000212] text-[15px] font-semibold px-7 py-4 rounded-[10px] shadow-[0_0_30px_rgba(83,252,24,0.25)] hover:scale-[1.04] active:scale-[0.97] transition-transform duration-200 ease-out no-underline"
           >
             Book a Strategy Call

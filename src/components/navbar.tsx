@@ -39,7 +39,9 @@ export function Navbar() {
 
         {/* CTA */}
         <a
-          href="#book"
+          href="https://calendly.com/dillon-hippaihq/ai-automation-strategy-call"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-[#53FC18] text-[#000212] text-[14px] font-semibold px-5 py-[10px] rounded-[8px] shadow-[0_0_20px_rgba(83,252,24,0.2)] hover:scale-[1.04] active:scale-[0.97] transition-transform duration-200 ease-out no-underline"
         >
           Book a Call

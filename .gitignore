@@ -37,3 +37,4 @@ temporary screenshots/
 
 # Claude
 .claude/settings.local.json
+.vercel

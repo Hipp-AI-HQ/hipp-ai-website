@@ -28,7 +28,9 @@ export function HeroSection() {
           </p>
           <div className="mt-6">
             <a
-              href="#book"
+              href="https://calendly.com/dillon-hippaihq/ai-automation-strategy-call"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block rounded-lg bg-[#53FC18] px-8 py-3.5 text-sm font-semibold text-[#0B0F0C] shadow-[0_0_24px_rgba(83,252,24,0.25)] transition-transform duration-200 ease-out hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#53FC18] active:scale-95"
             >
               Book a Strategy Call
