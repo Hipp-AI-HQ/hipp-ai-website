@@ -23,9 +23,9 @@ export function Navbar() {
         {/* Nav links */}
         <nav className="hidden md:flex items-center gap-8">
           {[
-            { label: "Features", href: "#features" },
-            { label: "How It Works", href: "#how-it-works" },
-            { label: "Pricing", href: "#pricing" },
+            { label: "Lead System", href: "#features" },
+            { label: "Intelligence", href: "#how-it-works" },
+            { label: "Implementation", href: "#pricing" },
           ].map(({ label, href }) => (
             <a
               key={label}

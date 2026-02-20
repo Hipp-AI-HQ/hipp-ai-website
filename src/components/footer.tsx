@@ -2,9 +2,9 @@ const links = [
   {
     group: "Product",
     items: [
-      { label: "Features", href: "#features" },
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "Pricing", href: "#pricing" },
+      { label: "Lead System", href: "#features" },
+      { label: "Intelligence", href: "#how-it-works" },
+      { label: "Implementation", href: "#pricing" },
     ],
   },
   {
