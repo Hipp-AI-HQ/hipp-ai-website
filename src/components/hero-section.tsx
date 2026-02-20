@@ -16,15 +16,17 @@ export function HeroSection() {
         {/* Left content */}
         <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-sora)] tracking-[-0.03em] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-            Your Business
+            Your operations.
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#53FC18] to-[#3AD40E]">
-              Runs Itself.
+              Fully automated.
             </span>
           </h1>
           <p className="mt-4 text-neutral-300 max-w-lg leading-[1.7]">
-            We design and deploy AI-powered systems that capture leads, follow
-            up instantly, and book appointments — without adding headcount.
+            Hipp AI designs and deploys custom AI workflow infrastructure for
+            real estate teams, contractors, and service operators — replacing
+            manual processes with intelligent systems built around your exact
+            stack.
           </p>
           <div className="mt-6">
             <a

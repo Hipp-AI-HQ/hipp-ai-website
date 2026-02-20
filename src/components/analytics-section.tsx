@@ -9,17 +9,17 @@ const weeklyData = [
 ];
 
 const funnel = [
-  { stage: "Leads contacted", pct: 100 },
-  { stage: "Qualified", pct: 68 },
-  { stage: "Appointments set", pct: 42 },
-  { stage: "Closed", pct: 31 },
+  { stage: "Lead captured", pct: 100 },
+  { stage: "AI qualified", pct: 75 },
+  { stage: "Follow-up triggered", pct: 60 },
+  { stage: "Appointment booked", pct: 45 },
 ];
 
 const stats = [
-  { value: "<60s", label: "Avg AI response" },
-  { value: "47%", label: "Conversion lift" },
-  { value: "8hrs", label: "Saved per rep/week" },
-  { value: "99.9%", label: "Follow-up rate" },
+  { value: "Monitor", label: "Workflow oversight" },
+  { value: "Live", label: "Real-time activity" },
+  { value: "Central", label: "Unified pipeline view" },
+  { value: "Synced", label: "CRM synchronization" },
 ];
 
 export function AnalyticsSection() {
@@ -43,20 +43,21 @@ export function AnalyticsSection() {
               className="text-[#53FC18] text-[12px] font-medium uppercase tracking-[0.1em]"
               style={{ fontFamily: "var(--font-ibm-plex)" }}
             >
-              Analytics
+              Operational Intelligence
             </span>
           </div>
           <h2
             className="text-[40px] md:text-[48px] font-bold tracking-[-0.03em] text-[#f7f8f8] leading-[1.1] mb-5"
             style={{ fontFamily: "var(--font-sora)" }}
           >
-            Your pipeline,
+            Operational intelligence.
             <br />
-            always visible.
+            Total system transparency.
           </h2>
           <p className="text-[#b4bcd0] text-[16px] leading-[1.7] max-w-[480px] mx-auto">
-            Know exactly what&apos;s working, what&apos;s converting, and where
-            revenue is coming from — in real time.
+            Complete visibility into every layer of your automation — inbound
+            activity, workflow execution, pipeline health, and CRM sync.
+            Centralized, structured, real-time.
           </p>
         </div>
 
@@ -73,10 +74,10 @@ export function AnalyticsSection() {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <div className="text-[#f7f8f8] text-[14px] font-medium">
-                  Weekly Leads
+                  Inbound Activity
                 </div>
                 <div className="text-[#b4bcd066] text-[12px] mt-0.5">
-                  This week · 102 total
+                  Lead ingestion monitor
                 </div>
               </div>
               <div
@@ -86,7 +87,7 @@ export function AnalyticsSection() {
                   color: "#53FC18",
                 }}
               >
-                ↑ 23% vs last week
+                Live
               </div>
             </div>
 
@@ -125,10 +126,10 @@ export function AnalyticsSection() {
           >
             <div className="mb-6">
               <div className="text-[#f7f8f8] text-[14px] font-medium">
-                Conversion Funnel
+                Workflow Monitor
               </div>
               <div className="text-[#b4bcd066] text-[12px] mt-0.5">
-                Last 30 days
+                System execution layers
               </div>
             </div>
 
@@ -138,9 +139,6 @@ export function AnalyticsSection() {
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-[#b4bcd0] text-[13px]">
                       {f.stage}
-                    </span>
-                    <span className="text-[#f7f8f8] text-[13px] font-medium">
-                      {f.pct}%
                     </span>
                   </div>
                   <div
@@ -167,9 +165,9 @@ export function AnalyticsSection() {
               style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
             >
               <span className="text-[#b4bcd066] text-[12px]">
-                Industry avg close rate
+                End-to-end automation
               </span>
-              <span className="text-[#b4bcd0] text-[12px]">~18%</span>
+              <span className="text-[#53FC18] text-[12px]">All stages covered</span>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ export function CtaSection() {
             className="text-[#53FC18] text-[12px] font-medium uppercase tracking-[0.1em]"
             style={{ fontFamily: "var(--font-ibm-plex)" }}
           >
-            Get Started
+            Work With Us
           </span>
         </div>
 
@@ -40,8 +40,9 @@ export function CtaSection() {
         </h2>
 
         <p className="text-[#b4bcd0] text-[18px] leading-[1.7] max-w-[460px] mx-auto mb-10">
-          Book a 30-minute strategy call. We&apos;ll map out exactly which
-          processes to automate first and what results to expect.
+          Book a strategy call. We&apos;ll map where automation creates the most
+          leverage in your business — and outline exactly how we&apos;d build
+          it.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -81,21 +82,21 @@ export function CtaSection() {
         {/* Trust indicators */}
         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 text-[13px] text-[#b4bcd066]">
           <span className="flex items-center gap-2">
-            <span className="text-[#53FC18]">✓</span> No setup fees
+            <span className="text-[#53FC18]">✓</span> Strategy-first approach
           </span>
           <span
             className="hidden sm:block w-1 h-1 rounded-full"
             style={{ background: "rgba(180,188,208,0.2)" }}
           />
           <span className="flex items-center gap-2">
-            <span className="text-[#53FC18]">✓</span> Live in 3 days
+            <span className="text-[#53FC18]">✓</span> Custom-built systems
           </span>
           <span
             className="hidden sm:block w-1 h-1 rounded-full"
             style={{ background: "rgba(180,188,208,0.2)" }}
           />
           <span className="flex items-center gap-2">
-            <span className="text-[#53FC18]">✓</span> Cancel anytime
+            <span className="text-[#53FC18]">✓</span> No templates. No shortcuts.
           </span>
         </div>
       </div>

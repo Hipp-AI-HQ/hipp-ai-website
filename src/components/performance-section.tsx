@@ -1,32 +1,32 @@
 const metrics = [
   {
-    value: "3",
-    unit: "days",
-    label: "Average setup time",
+    value: "01",
+    unit: "",
+    label: "Audit & mapping",
     description:
-      "From kickoff call to live automation — fully configured and tested.",
+      "We analyze your current workflow infrastructure, document manual bottlenecks, and define the full system architecture before any build begins.",
   },
   {
-    value: "<60",
-    unit: "seconds",
-    label: "AI response speed",
+    value: "02",
+    unit: "",
+    label: "System architecture & build",
     description:
-      "Every new lead receives a personalized reply before your competitors even see the notification.",
+      "Every automation layer is custom-designed to your stack — from API connections and webhook routing to CRM logic, sequencing rules, and qualification criteria.",
   },
   {
-    value: "100",
-    unit: "%",
-    label: "Follow-up rate",
+    value: "03",
+    unit: "",
+    label: "Testing, deployment & optimization",
     description:
-      "Every lead, every time — no exceptions, no forgotten follow-ups, no revenue left behind.",
+      "Systems are validated against live scenarios before deployment. Post-launch, we monitor workflow performance and refine continuously.",
   },
 ];
 
 const smallStats = [
-  { value: "10k+", label: "Leads processed" },
-  { value: "99.9%", label: "System uptime" },
-  { value: "$2M+", label: "Revenue attributed" },
-  { value: "200+", label: "Automations deployed" },
+  { value: "Audit", label: "Workflow analysis" },
+  { value: "Architect", label: "System design" },
+  { value: "Deploy", label: "Validated rollout" },
+  { value: "Optimize", label: "Continuous refinement" },
 ];
 
 export function PerformanceSection() {
@@ -50,20 +50,21 @@ export function PerformanceSection() {
               className="text-[#53FC18] text-[12px] font-medium uppercase tracking-[0.1em]"
               style={{ fontFamily: "var(--font-ibm-plex)" }}
             >
-              Performance
+              Implementation
             </span>
           </div>
           <h2
             className="text-[40px] md:text-[48px] font-bold tracking-[-0.03em] text-[#f7f8f8] leading-[1.1] mb-5"
             style={{ fontFamily: "var(--font-sora)" }}
           >
-            Fast setup.
+            How we build
             <br />
-            Faster results.
+            your system.
           </h2>
           <p className="text-[#b4bcd0] text-[16px] leading-[1.7] max-w-[460px] mx-auto">
-            We move fast and build right. Most clients are live and generating
-            results within a week of signing.
+            Every engagement follows a structured implementation framework —
+            from audit through deployment. No shortcuts, no templates,
+            no guesswork.
           </p>
         </div>
 

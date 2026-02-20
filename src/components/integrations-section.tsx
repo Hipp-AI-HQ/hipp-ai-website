@@ -1,23 +1,23 @@
 const features = [
   {
-    label: "CRM sync",
+    label: "CRM synchronization",
     description:
-      "All lead data, conversations, and bookings sync automatically to your CRM.",
+      "Bi-directional API connections to GoHighLevel, HubSpot, and Salesforce — lead records, activity logs, and pipeline stages stay synchronized automatically.",
   },
   {
-    label: "Calendar integration",
+    label: "Booking & scheduling layer",
     description:
-      "Connects directly to Google Calendar, Calendly, or Acuity — no double booking.",
+      "Calendar APIs handle availability logic, conflict resolution, and confirmation sequences — connected directly to your scheduling infrastructure.",
   },
   {
-    label: "Ad platform connections",
+    label: "Lead source webhooks",
     description:
-      "Pulls leads directly from Facebook Ads, Google Ads, and TikTok in real time.",
+      "Webhook integrations receive lead data from ad platforms, web forms, and inbound channels — normalizing records into your pipeline on arrival.",
   },
   {
-    label: "Communication channels",
+    label: "Outreach automation layer",
     description:
-      "Runs over email, SMS, and direct message — wherever your leads are.",
+      "Email, SMS, and DM sequences are orchestrated via API connections to Twilio, SendGrid, and your CRM — triggered by workflow logic, not manual action.",
   },
 ];
 
@@ -61,7 +61,7 @@ export function IntegrationsSection() {
                 className="text-[#53FC18] text-[12px] font-medium uppercase tracking-[0.1em]"
                 style={{ fontFamily: "var(--font-ibm-plex)" }}
               >
-                Integrations
+                System Architecture
               </span>
             </div>
 
@@ -69,15 +69,16 @@ export function IntegrationsSection() {
               className="text-[40px] font-bold tracking-[-0.03em] text-[#f7f8f8] leading-[1.15] mb-5"
               style={{ fontFamily: "var(--font-sora)" }}
             >
-              Plugs into the tools
+              API-native.
               <br />
-              you already use.
+              Stack-agnostic.
             </h2>
 
             <p className="text-[#b4bcd0] text-[16px] leading-[1.7] mb-10 max-w-[440px]">
-              We connect to your existing CRM, calendar, ad platforms, and
-              communication stack. No ripping and replacing. No new logins to
-              manage. Just results.
+              We build API-native integration layers connecting your CRM,
+              calendar, lead sources, and communication tools. Webhook-based
+              architecture, custom automation logic, and synchronized data —
+              engineered to your exact stack.
             </p>
 
             <div className="space-y-6">
@@ -110,7 +111,7 @@ export function IntegrationsSection() {
               style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
             >
               <span className="text-[#f7f8f8] text-[13px] font-medium pb-4">
-                Connected integrations
+                Stack integrations
               </span>
               <span
                 className="text-[11px] px-2 py-1 rounded-full mb-4"
@@ -155,7 +156,7 @@ export function IntegrationsSection() {
               className="mt-5 pt-4 text-[12px] text-[#b4bcd066]"
               style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
             >
-              + Zapier means 1,000+ more apps available
+              Custom API connections available for platforms not covered by native integrations.
             </div>
           </div>
         </div>

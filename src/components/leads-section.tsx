@@ -1,23 +1,23 @@
 const features = [
   {
-    label: "Instant response",
+    label: "Multi-channel lead ingestion",
     description:
-      "AI replies to new leads in under 60 seconds — day, night, weekends.",
+      "Inbound signals from web forms, paid ads, SMS, and organic sources are captured automatically and normalized into a unified pipeline.",
   },
   {
-    label: "Smart qualification",
+    label: "AI qualification engine",
     description:
-      "Automatically asks the right questions to separate serious buyers from tire-kickers.",
+      "Intelligent logic screens and categorizes leads based on defined criteria — prioritizing high-value inquiries and routing low-intent contacts accordingly.",
   },
   {
-    label: "Auto booking",
+    label: "Automated follow-up architecture",
     description:
-      "Qualified leads go straight to your calendar. No back-and-forth required.",
+      "Sequenced follow-up workflows execute based on lead behavior and pipeline stage, without manual scheduling or intervention at any point.",
   },
   {
-    label: "Automatic follow-up",
+    label: "Calendar routing & booking engine",
     description:
-      "If a lead goes cold, AI follows up automatically — up to 5 touch points.",
+      "Qualified leads pass into a booking layer that handles scheduling logic, conflict resolution, confirmation, and calendar sync automatically.",
   },
 ];
 
@@ -27,7 +27,7 @@ const leads = [
     name: "Alex Morrison",
     industry: "Real Estate · San Diego",
     status: "Qualified",
-    time: "47s",
+    time: "",
     statusColor: "rgba(255,193,7,0.15)",
     statusText: "#FFC107",
   },
@@ -36,7 +36,7 @@ const leads = [
     name: "Maria Chen",
     industry: "General Contractor · Austin",
     status: "Booked",
-    time: "32s",
+    time: "",
     statusColor: "rgba(83,252,24,0.12)",
     statusText: "#53FC18",
   },
@@ -45,7 +45,7 @@ const leads = [
     name: "Jordan Price",
     industry: "HVAC Services · Miami",
     status: "New",
-    time: "12s",
+    time: "",
     statusColor: "rgba(180,188,208,0.1)",
     statusText: "#b4bcd0",
   },
@@ -74,7 +74,7 @@ export function LeadsSection() {
                 className="text-[#53FC18] text-[12px] font-medium uppercase tracking-[0.1em]"
                 style={{ fontFamily: "var(--font-ibm-plex)" }}
               >
-                Lead Automation
+                Lead Infrastructure
               </span>
             </div>
 
@@ -83,16 +83,16 @@ export function LeadsSection() {
               className="text-[40px] font-bold tracking-[-0.03em] text-[#f7f8f8] leading-[1.15] mb-5"
               style={{ fontFamily: "var(--font-sora)" }}
             >
-              Stop losing leads to
+              Your lead system.
               <br />
-              slow response times.
+              Fully automated.
             </h2>
 
             {/* Body */}
             <p className="text-[#b4bcd0] text-[16px] leading-[1.7] mb-10 max-w-[440px]">
-              Every lead that goes unanswered is revenue left on the table. Hipp
-              AI responds in under 60 seconds — qualifying, following up, and
-              booking appointments automatically.
+              We architect a complete inbound lead system — from first contact
+              through qualification, follow-up, and calendar booking. Every
+              stage is automated, integrated, and built to your workflow.
             </p>
 
             {/* Feature items */}
@@ -200,10 +200,10 @@ export function LeadsSection() {
                 style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
               >
                 <span className="text-[#b4bcd066] text-[12px]">
-                  AI responded to 3 leads
+                  System active
                 </span>
                 <span className="text-[#53FC18] text-[12px] font-medium">
-                  avg 30s
+                  3 leads in queue
                 </span>
               </div>
             </div>
@@ -236,7 +236,7 @@ export function LeadsSection() {
                   you with our team — when are you free for a quick call?
                 </p>
                 <div className="mt-2 text-[11px] text-[#b4bcd066]">
-                  Just now · 47s after inquiry
+                  Just now · Response sent
                 </div>
               </div>
             </div>

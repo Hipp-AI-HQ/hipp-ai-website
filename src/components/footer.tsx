@@ -51,7 +51,7 @@ export function Footer() {
               </span>
             </a>
             <p className="text-[#b4bcd066] text-[13px] leading-[1.6] max-w-[180px]">
-              AI automation systems that run your business.
+              AI automation systems for service businesses.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ export function Footer() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <span className="text-[#b4bcd066] text-[13px]">
-            © 2025 Hipp AI. All rights reserved.
+            © 2026 Hipp AI. All rights reserved.
           </span>
           <span className="text-[#b4bcd066] text-[13px]">
             Built for businesses that move fast.
