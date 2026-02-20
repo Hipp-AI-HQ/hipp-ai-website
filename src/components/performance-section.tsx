@@ -110,11 +110,10 @@ export function PerformanceSection() {
 
         {/* Small stats row */}
         <div
-          className="grid grid-cols-2 md:grid-cols-4 divide-x rounded-2xl overflow-hidden"
+          className="grid grid-cols-2 md:grid-cols-4 rounded-2xl overflow-hidden"
           style={{
             background: "rgba(255,255,255,0.02)",
             border: "1px solid rgba(255,255,255,0.07)",
-            divideColor: "rgba(255,255,255,0.07)",
           }}
         >
           {smallStats.map((s, i) => (
