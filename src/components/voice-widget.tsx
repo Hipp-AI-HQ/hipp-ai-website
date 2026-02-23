@@ -3,7 +3,6 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import Vapi from "@vapi-ai/web";
 import { motion, AnimatePresence, useSpring, useTransform } from "framer-motion";
-import { VoiceFormPanel } from "./voice-form-panel";
 
 type WidgetState = "idle" | "connecting" | "active" | "ended";
 
@@ -39,7 +38,7 @@ export function VoiceWidget() {
       setState("ended");
       setIsSpeaking(false);
       setVolumeLevel(0);
-      setTimeout(() => setState("idle"), 2800);
+      setTimeout(() => setState("idle"), 8000);
     };
     const onSpeechStart = () => setIsSpeaking(true);
     const onSpeechEnd = () => setIsSpeaking(false);
@@ -151,6 +150,78 @@ export function VoiceWidget() {
         style={{ gap: "10px" }}
         aria-live="polite"
       >
+        {/* ── Connect CTA card — appears after call ends ── */}
+        <AnimatePresence>
+          {state === "ended" && (
+            <motion.div
+              key="connect-cta"
+              initial={{ opacity: 0, y: 12, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 8, scale: 0.96 }}
+              transition={{ type: "spring", stiffness: 400, damping: 28, delay: 0.15 }}
+              style={{
+                background: "rgba(0, 2, 18, 0.92)",
+                border: "1px solid rgba(83,252,24,0.2)",
+                borderRadius: 14,
+                backdropFilter: "blur(20px)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(83,252,24,0.06) inset",
+                padding: "16px 18px",
+                width: 220,
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-sora)",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: "#f0f4ef",
+                  margin: "0 0 4px",
+                  letterSpacing: "-0.01em",
+                }}
+              >
+                Want to go further?
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-ibm-plex)",
+                  fontSize: 12,
+                  color: "rgba(200,216,196,0.55)",
+                  margin: "0 0 12px",
+                  lineHeight: 1.5,
+                }}
+              >
+                Fill out the form or book a call.
+              </p>
+              <a
+                href="https://www.hippaihq.com/connect"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  padding: "9px 0",
+                  borderRadius: 8,
+                  background: "#53FC18",
+                  color: "#0B0F0C",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  fontFamily: "var(--font-sora)",
+                  textAlign: "center",
+                  textDecoration: "none",
+                  letterSpacing: "-0.01em",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = "0.88";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = "1";
+                }}
+              >
+                Get in touch →
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* ── Tooltip / status badge ── */}
         <AnimatePresence mode="wait">
           {state === "idle" && (
@@ -382,12 +453,6 @@ export function VoiceWidget() {
         </motion.button>
       </div>
 
-      {/* Contact form panel — slides out during active/ended calls */}
-      <AnimatePresence>
-        {(state === "active" || state === "ended") && (
-          <VoiceFormPanel visible={true} />
-        )}
-      </AnimatePresence>
     </>
   );
 }

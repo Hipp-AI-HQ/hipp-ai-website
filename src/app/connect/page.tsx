@@ -19,6 +19,7 @@ export default function ConnectPage() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
 
   const canSubmit =
     status === "idle" &&
@@ -40,6 +41,7 @@ export default function ConnectPage() {
           email: email.trim(),
           phone: phone.trim() || undefined,
           company: company.trim() || undefined,
+          message: message.trim() || undefined,
           source: "Phone Call",
         }),
       });
@@ -387,6 +389,32 @@ export default function ConnectPage() {
                     onChange={setCompany}
                     placeholder="Acme Corp"
                   />
+
+                  <div>
+                    <label style={labelBase}>
+                      What are you looking to solve?
+                    </label>
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder="e.g. We want to automate our lead follow-up and reduce manual data entry"
+                      rows={3}
+                      style={{
+                        ...inputBase,
+                        resize: "vertical",
+                        minHeight: 80,
+                        lineHeight: 1.55,
+                      }}
+                      onFocus={(e) => {
+                        e.target.style.borderColor = "rgba(83,252,24,0.35)";
+                        e.target.style.background = "rgba(83,252,24,0.03)";
+                      }}
+                      onBlur={(e) => {
+                        e.target.style.borderColor = "rgba(255,255,255,0.08)";
+                        e.target.style.background = "rgba(255,255,255,0.04)";
+                      }}
+                    />
+                  </div>
                 </div>
 
                 <div
