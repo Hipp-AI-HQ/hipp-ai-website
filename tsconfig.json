@@ -30,5 +30,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "Hipp_AI_Voice_Agent_Widget", "Hipp_AI_Voice_Agent_Phone_Number"]
 }
