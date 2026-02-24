@@ -91,6 +91,13 @@ export function ChatWidget() {
     }
   }, [open]);
 
+  // Re-focus after each response (loading → false) so user can keep typing
+  useEffect(() => {
+    if (!loading && open) {
+      inputRef.current?.focus();
+    }
+  }, [loading]);
+
   const sendMessage = useCallback(async () => {
     const text = input.trim();
     if (!text || loading) return;
@@ -100,7 +107,6 @@ export function ChatWidget() {
     setMessages(nextMessages);
     setInput("");
     setLoading(true);
-    inputRef.current?.focus();
 
     try {
       const res = await fetch(`${SERVER_URL}/api/chat/message`, {
@@ -129,7 +135,6 @@ export function ChatWidget() {
       ]);
     } finally {
       setLoading(false);
-      inputRef.current?.focus();
     }
   }, [input, loading, messages]);
 
