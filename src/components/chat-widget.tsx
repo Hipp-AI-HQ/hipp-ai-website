@@ -14,6 +14,64 @@ const INITIAL_MESSAGE: Message = {
   content: "Hi! I'm the Hipp AI assistant. What can I help you with today?",
 };
 
+// Splits message text into plain-text and link segments so URLs and phone
+// numbers render as tappable anchors.
+function renderContent(text: string, isUser: boolean) {
+  const linkColor = isUser ? "#000212" : "#53FC18";
+  const pattern =
+    /(https?:\/\/[^\s]+)|(\+1\s?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{4})/g;
+
+  const parts: React.ReactNode[] = [];
+  let last = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > last) {
+      parts.push(text.slice(last, match.index));
+    }
+
+    const raw = match[0];
+    if (raw.startsWith("http")) {
+      // Show a shortened label for long URLs
+      const label =
+        raw.length > 40
+          ? raw.replace(/^https?:\/\//, "").slice(0, 38) + "…"
+          : raw;
+      parts.push(
+        <a
+          key={match.index}
+          href={raw}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: linkColor, textDecoration: "underline", fontWeight: 600 }}
+        >
+          {label}
+        </a>
+      );
+    } else {
+      // Phone number — strip to digits for tel: href
+      const digits = raw.replace(/\D/g, "");
+      parts.push(
+        <a
+          key={match.index}
+          href={`tel:+${digits}`}
+          style={{ color: linkColor, textDecoration: "underline", fontWeight: 600 }}
+        >
+          {raw}
+        </a>
+      );
+    }
+
+    last = match.index + raw.length;
+  }
+
+  if (last < text.length) {
+    parts.push(text.slice(last));
+  }
+
+  return parts;
+}
+
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE]);
@@ -244,7 +302,7 @@ export function ChatWidget() {
                       wordBreak: "break-word",
                     }}
                   >
-                    {msg.content}
+                    {renderContent(msg.content, msg.role === "user")}
                   </div>
                 </div>
               ))}
