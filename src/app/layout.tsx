@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import { VoiceWidget } from "@/components/voice-widget";
+import { ChatWidget } from "@/components/chat-widget";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${sora.variable} ${ibmPlexSans.variable} font-[family-name:var(--font-ibm-plex)] antialiased`}
       >
         {children}
-        <VoiceWidget />
+        <ChatWidget />
       </body>
     </html>
   );
