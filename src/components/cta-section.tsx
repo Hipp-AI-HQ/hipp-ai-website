@@ -65,17 +65,26 @@ export function CtaSection() {
             </svg>
           </a>
 
-          {/* Secondary CTA */}
+          {/* Secondary CTA — phone */}
           <a
-            href="#how-it-works"
-            className="inline-flex items-center gap-2 text-[15px] font-medium px-7 py-4 rounded-[10px] transition-colors duration-150 no-underline"
+            href="tel:+17177027833"
+            className="inline-flex items-center gap-2.5 text-[15px] font-medium px-7 py-4 rounded-[10px] transition-colors duration-150 no-underline hover:border-[rgba(83,252,24,0.3)] hover:text-[#f7f8f8]"
             style={{
               color: "#b4bcd0",
               border: "1px solid rgba(255,255,255,0.1)",
               background: "rgba(255,255,255,0.03)",
             }}
           >
-            See How It Works
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path
+                d="M13.5 10.73v1.875A1.25 1.25 0 0 1 12.138 13.9a12.437 12.437 0 0 1-5.42-1.928 12.25 12.25 0 0 1-3.75-3.75A12.437 12.437 0 0 1 1.04 2.775 1.25 1.25 0 0 1 2.288 1.5H4.163a1.25 1.25 0 0 1 1.25 1.075c.079.625.225 1.24.438 1.832a1.25 1.25 0 0 1-.281 1.32L4.782 6.51a10 10 0 0 0 3.75 3.75l.788-.788a1.25 1.25 0 0 1 1.32-.281c.592.213 1.207.359 1.832.437A1.25 1.25 0 0 1 13.5 10.73Z"
+                stroke="currentColor"
+                strokeWidth="1.25"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            +1 (717) 702-7833
           </a>
         </div>
 
