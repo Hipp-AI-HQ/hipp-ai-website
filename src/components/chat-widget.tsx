@@ -42,6 +42,7 @@ export function ChatWidget() {
     setMessages(nextMessages);
     setInput("");
     setLoading(true);
+    inputRef.current?.focus();
 
     try {
       const res = await fetch(`${SERVER_URL}/api/chat/message`, {
@@ -70,6 +71,7 @@ export function ChatWidget() {
       ]);
     } finally {
       setLoading(false);
+      inputRef.current?.focus();
     }
   }, [input, loading, messages]);
 
