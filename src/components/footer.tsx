@@ -18,8 +18,8 @@ const links = [
   {
     group: "Legal",
     items: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "SMS Policy", href: "/sms-policy" },
     ],
   },
 ];
