@@ -14,7 +14,7 @@ const sections = [
   },
   {
     title: "Consent",
-    body: "By verbally requesting a link during a call with Hipp AI, the caller provides express consent to receive a single SMS containing the requested information. Consent is voluntary and can be revoked at any time.",
+    body: "By verbally requesting a link during a call with Hipp AI, the caller provides express consent to receive a single SMS containing the requested information. Consent is collected verbally before any SMS is sent, and the call may be recorded for compliance and documentation purposes. Consent is voluntary and can be revoked at any time.",
   },
   {
     title: "Message Frequency",

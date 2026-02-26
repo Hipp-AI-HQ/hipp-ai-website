@@ -42,7 +42,7 @@ const sections = [
   },
   {
     title: "Contact",
-    body: "For any privacy-related questions or requests, contact us at dillon@hippaihq.com or call +1 (717) 702-7833.",
+    body: "For any privacy-related questions or requests, contact us at dillon@hippaihq.com or call +1 (888) 861-5661.",
   },
 ];
 
