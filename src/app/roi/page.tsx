@@ -196,12 +196,15 @@ export default function RoiPage() {
               </div>
 
               <div>
-                <p style={{ ...label, marginBottom: 4 }}>Year-one cost of the AI system</p>
+                <p style={{ ...label, marginBottom: 4 }}>
+                  Typical AI system cost, year one
+                </p>
                 <p style={{ fontSize: 26, fontWeight: 700, fontFamily: "var(--font-sora)" }}>
                   {fmt(calc.systemYear1)}
                 </p>
                 <p style={{ color: MUTED, fontSize: 12 }}>
-                  {fmt(SPRINT)} two-week build + {fmt(MAINTAIN_MO)}/mo to keep it running
+                  Example build: {fmt(SPRINT)} two-week build + {fmt(MAINTAIN_MO)}/mo upkeep.
+                  Scope changes the number — your quote comes from the scoping call.
                 </p>
               </div>
 
@@ -271,8 +274,9 @@ export default function RoiPage() {
                 time, months at partial productivity).
               </li>
               <li>
-                AI system = {fmt(SPRINT)} fixed-price two-week build + {fmt(MAINTAIN_MO)}
-                /month maintenance. No seats, no per-task fees.
+                AI system figure is an example — a typical two-week build around{" "}
+                {fmt(SPRINT)} plus {fmt(MAINTAIN_MO)}/month upkeep. Bigger scopes cost
+                more, smaller ones less. No seats, no per-task fees either way.
               </li>
               <li>
                 These are estimates. Your real number comes out of a five-minute scoping
