@@ -12,7 +12,7 @@ const links = [
     items: [
       { label: "About", href: "#" },
       { label: "Blog", href: "#" },
-      { label: "Contact", href: "tel:+17177027833" },
+      { label: "Contact", href: "tel:+18888615661" },
     ],
   },
   {
@@ -54,7 +54,7 @@ export function Footer() {
               AI automation systems for service businesses.
             </p>
             <a
-              href="tel:+17177027833"
+              href="tel:+18888615661"
               className="mt-5 flex items-center gap-2 no-underline group"
             >
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -67,7 +67,7 @@ export function Footer() {
                 />
               </svg>
               <span className="text-[#53FC18] text-[13px] group-hover:opacity-80 transition-opacity duration-150">
-                +1 (717) 702-7833
+                +1 (888) 861-5661
               </span>
             </a>
           </div>

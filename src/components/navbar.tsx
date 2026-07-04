@@ -39,7 +39,7 @@ export function Navbar() {
 
         {/* Mobile: phone icon only */}
         <a
-          href="tel:+17177027833"
+          href="tel:+18888615661"
           className="md:hidden flex items-center justify-center w-9 h-9 rounded-[8px] text-[#b4bcd0] hover:text-[#f7f8f8] transition-colors duration-150"
           style={{ border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)" }}
         >
@@ -57,7 +57,7 @@ export function Navbar() {
         {/* Right side: phone + CTA */}
         <div className="hidden md:flex items-center gap-5">
           <a
-            href="tel:+17177027833"
+            href="tel:+18888615661"
             className="flex items-center gap-2 text-[14px] text-[#b4bcd0] hover:text-[#f7f8f8] transition-colors duration-150 no-underline"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -69,7 +69,7 @@ export function Navbar() {
                 strokeLinejoin="round"
               />
             </svg>
-            (717) 702-7833
+            (888) 861-5661
           </a>
 
           <a

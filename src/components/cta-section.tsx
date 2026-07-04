@@ -67,7 +67,7 @@ export function CtaSection() {
 
           {/* Secondary CTA — phone */}
           <a
-            href="tel:+17177027833"
+            href="tel:+18888615661"
             className="inline-flex items-center gap-2.5 text-[15px] font-medium px-7 py-4 rounded-[10px] transition-colors duration-150 no-underline hover:border-[rgba(83,252,24,0.3)] hover:text-[#f7f8f8]"
             style={{
               color: "#b4bcd0",
@@ -84,7 +84,7 @@ export function CtaSection() {
                 strokeLinejoin="round"
               />
             </svg>
-            +1 (717) 702-7833
+            +1 (888) 861-5661
           </a>
         </div>
 
