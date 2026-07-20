@@ -1,109 +1,80 @@
-const links = [
-  {
-    group: "Product",
-    items: [
-      { label: "Lead System", href: "#features" },
-      { label: "Intelligence", href: "#how-it-works" },
-      { label: "Implementation", href: "#pricing" },
-    ],
-  },
-  {
-    group: "Company",
-    items: [
-      { label: "About", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Contact", href: "tel:+18888615661" },
-    ],
-  },
-  {
-    group: "Legal",
-    items: [
-      { label: "Privacy Policy", href: "/privacy-policy" },
-      { label: "SMS Policy", href: "/sms-policy" },
-    ],
-  },
-];
+import { CALENDLY_URL, EMAIL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer
-      className="relative py-16 overflow-hidden"
-      style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
-    >
-      <div className="max-w-[1100px] mx-auto px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-14">
-          {/* Logo column */}
+    <footer className="border-t border-white/[0.07] py-14">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
           <div>
-            <a href="/" className="flex items-center gap-2.5 no-underline mb-4">
-              <div className="w-7 h-7 rounded-[7px] bg-[#53FC18] flex items-center justify-center shadow-[0_0_10px_rgba(83,252,24,0.3)]">
-                <span
-                  className="text-[#000212] font-extrabold text-[11px]"
-                  style={{ fontFamily: "var(--font-sora)" }}
-                >
-                  H
-                </span>
-              </div>
-              <span
-                className="text-[#f7f8f8] font-semibold text-[15px] tracking-[-0.01em]"
-                style={{ fontFamily: "var(--font-sora)" }}
-              >
-                Hipp AI
-              </span>
-            </a>
-            <p className="text-[#b4bcd066] text-[13px] leading-[1.6] max-w-[180px]">
-              AI automation systems for service businesses.
-            </p>
             <a
-              href="tel:+18888615661"
-              className="mt-5 flex items-center gap-2 no-underline group"
+              href="/"
+              className="font-display text-[15px] tracking-[0.08em] text-white no-underline"
             >
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path
-                  d="M11.917 9.438v1.625A1.083 1.083 0 0 1 10.786 12.1a10.646 10.646 0 0 1-4.638-1.65A10.483 10.483 0 0 1 2.94 7.242a10.646 10.646 0 0 1-1.65-4.659A1.083 1.083 0 0 1 2.37 1.5H3.99a1.083 1.083 0 0 1 1.083.933c.069.542.195 1.076.379 1.59a1.083 1.083 0 0 1-.244 1.143l-.683.683a8.667 8.667 0 0 0 3.25 3.25l.683-.683a1.083 1.083 0 0 1 1.144-.244c.513.184 1.047.31 1.589.379a1.083 1.083 0 0 1 .926 1.099Z"
-                  stroke="#53FC18"
-                  strokeWidth="1.1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span className="text-[#53FC18] text-[13px] group-hover:opacity-80 transition-opacity duration-150">
-                +1 (888) 861-5661
-              </span>
+              HIPP<span className="text-[#00D4FF]">AI</span>
+            </a>
+            <p className="mt-3 max-w-[28ch] text-[13px] leading-relaxed text-white/40">
+              AI systems that take repetitive work off your team&apos;s plate —
+              built, run, and monitored for you.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 text-[13px]">
+            <span className="font-display text-[11px] tracking-[0.25em] text-white/35">
+              Contact
+            </span>
+            <a
+              href={PHONE_TEL}
+              className="text-[#00D4FF] no-underline transition-opacity hover:opacity-80"
+            >
+              {PHONE_DISPLAY} — the AI answers
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="text-white/55 no-underline transition-colors hover:text-white"
+            >
+              {EMAIL}
+            </a>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/55 no-underline transition-colors hover:text-white"
+            >
+              Book the free AI assessment
             </a>
           </div>
 
-          {/* Link columns */}
-          {links.map((group) => (
-            <div key={group.group}>
-              <div className="text-[#f7f8f8] text-[13px] font-medium mb-4">
-                {group.group}
-              </div>
-              <ul className="space-y-3">
-                {group.items.map((item) => (
-                  <li key={item.label}>
-                    <a
-                      href={item.href}
-                      className="text-[#b4bcd066] text-[13px] hover:text-[#b4bcd0] transition-colors duration-150 no-underline"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="flex flex-col gap-3 text-[13px]">
+            <span className="font-display text-[11px] tracking-[0.25em] text-white/35">
+              More
+            </span>
+            <a
+              href="/roi"
+              className="text-white/55 no-underline transition-colors hover:text-white"
+            >
+              ROI calculator
+            </a>
+            <a
+              href="/privacy-policy"
+              className="text-white/55 no-underline transition-colors hover:text-white"
+            >
+              Privacy policy
+            </a>
+            <a
+              href="/sms-policy"
+              className="text-white/55 no-underline transition-colors hover:text-white"
+            >
+              SMS policy
+            </a>
+          </div>
         </div>
 
-        {/* Bottom bar */}
-        <div
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
-        >
-          <span className="text-[#b4bcd066] text-[13px]">
-            © 2026 Hipp AI. All rights reserved.
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/[0.06] pt-7 sm:flex-row sm:items-center">
+          <span className="text-[13px] text-white/35">
+            © 2026 Hipp AI LLC. All rights reserved.
           </span>
-          <span className="text-[#b4bcd066] text-[13px]">
-            Built for businesses that move fast.
+          <span className="text-[13px] text-white/35">
+            Solo-built. Running 24/7.
           </span>
         </div>
       </div>

@@ -1,25 +1,33 @@
 import type { Metadata } from "next";
-import { Sora, IBM_Plex_Sans } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
-import { ChatWidget } from "@/components/chat-widget";
 
-const sora = Sora({
-  variable: "--font-sora",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["700", "800"],
   display: "swap",
 });
 
-const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-ibm-plex",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Hipp AI — AI Systems That Run Your Business",
+  metadataBase: new URL("https://hippaihq.com"),
+  title: "Hipp AI — You Run the Business. I'll Automate the Rest.",
   description:
-    "We design and deploy AI-powered automation systems that capture leads, follow up instantly, and book appointments — without adding headcount.",
+    "AI systems that take repetitive work off your team's plate — built, run, and monitored for you. Don't take my word for it: call the AI receptionist I built, +1 (888) 861-5661.",
+  openGraph: {
+    title: "Hipp AI — You Run the Business. I'll Automate the Rest.",
+    description:
+      "AI systems that take repetitive work off your team's plate — built, run, and monitored for you. Call the AI I built: +1 (888) 861-5661.",
+    url: "https://hippaihq.com",
+    siteName: "Hipp AI",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -30,10 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.variable} ${ibmPlexSans.variable} font-[family-name:var(--font-ibm-plex)] antialiased`}
+        className={`${montserrat.variable} ${inter.variable} font-[family-name:var(--font-inter)] antialiased`}
       >
         {children}
-        <ChatWidget />
       </body>
     </html>
   );
