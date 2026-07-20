@@ -49,31 +49,23 @@ export function Founder() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={view}
           transition={{ ...snap, delay: 0.08 }}
-          className="relative mx-auto w-full max-w-md"
+          className="relative mx-auto w-full max-w-sm"
         >
           <div
             aria-hidden
-            className="absolute inset-x-8 bottom-0 top-16 rounded-3xl"
+            className="absolute -inset-8 rounded-full"
             style={{
               background:
-                "radial-gradient(circle at 50% 30%, rgba(0,212,255,0.16) 0%, rgba(0,0,0,0) 70%)",
+                "radial-gradient(circle, rgba(0,212,255,0.18) 0%, rgba(0,0,0,0) 68%)",
             }}
           />
           <Image
-            src="/dillon-founder.png"
+            src="/dillon-linkedin.jpg"
             alt="Dillon Hippensteel, founder of Hipp AI"
-            width={1100}
-            height={1097}
+            width={1080}
+            height={1080}
             className="relative z-10 w-full"
             priority={false}
-          />
-          <div
-            aria-hidden
-            className="absolute inset-x-0 bottom-0 z-20 h-24"
-            style={{
-              background:
-                "linear-gradient(to top, #000 8%, rgba(0,0,0,0) 100%)",
-            }}
           />
         </motion.div>
       </div>
